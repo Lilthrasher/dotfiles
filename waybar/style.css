@@ -2,6 +2,8 @@ window#waybar {
 	background-color: rgba(0,0,0,0.25);
 }
 
+/* Left Modules */
+
 #workspaces {
 	margin: 10px 0px 10px 15px;
 	border-radius: 15px;
@@ -35,6 +37,17 @@ window#waybar {
 	border-radius: 15px;
 }
 
+#custom-spotify {
+        color: #FFFFFF;
+        background-color: rgba(0,0,0,0.5);
+        border-radius: 15px;
+        padding: 2px 15px;
+        margin: 10px 0px 10px 15px;
+        transition: all 0.3s ease-in-out;
+}
+
+/* Middle Modules */
+
 #window {
         color: #FFFFFF;
         background-color: rgba(0,0,0,0.5);
@@ -43,14 +56,7 @@ window#waybar {
         margin: 10px 15px;
 }
 
-#custom-spotify {
-        color: #FFFFFF;
-        background-color: rgba(0,0,0,0.5);
-        border-radius: 15px;
-        padding: 2px 15px;
-        margin: 10px 15px 10px 0px;
-	transition: all 0.3s ease-in-out;
-}
+/* Right Modules */
 
 #pulseaudio {
         color: #FFFFFF;

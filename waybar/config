@@ -6,12 +6,12 @@
     "reload_style_on_change": true,
     "modules-left": [
         "hyprland/workspaces",
-	"hyprland/window"
+	"custom/spotify"
     ],
     "modules-center": [
+	"hyprland/window"
     ],
     "modules-right": [
-	"custom/spotify",
 	"pulseaudio",
         "network",
         "clock",
@@ -37,12 +37,12 @@
 	    "class<spotify>": " ",
 	},
 	"persistent-workspaces": {
-	    "DP-2": [2,7,8]
+	    "DP-2": [7,8]
         }
     },
     "custom/spotify": {
         "exec": "/usr/bin/python3 /home/lilthrasher/.config/waybar/mediaplayer.py --player spotify",
-        "format": "{}  ",
+        "format": "  {}",
         "return-type": "json",
         "on-click": "playerctl play-pause",
         "on-scroll-up": "playerctl next",
@@ -54,11 +54,6 @@
         "format-muted": "",
         "format-icons": {
             "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
             "default": ["", ""]
         },
         "scroll-step": 5,
@@ -111,9 +106,9 @@
             "class<spotify>": " ",
         },
         "persistent-workspaces": {
-            "DP-1": [1,5,6],
-	    "DP-3": [3,9,10],
-	    "HDMI-A-1": [4,11,12]
+            "DP-1": [5,6],
+	    "DP-3": [9,10],
+	    "HDMI-A-1": [11,12]
         }
     },
 }
