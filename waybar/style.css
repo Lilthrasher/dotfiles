@@ -1,0 +1,93 @@
+window#waybar {
+	background-color: rgba(0,0,0,0.25);
+}
+
+#workspaces {
+	margin: 10px 0px 10px 15px;
+	border-radius: 15px;
+	font-weight: bold;
+	font-style: normal;
+	font-size: 14px;
+	background: rgba(0,0,0,0.5);
+}
+
+#workspaces button {
+	padding: 0px 15px;
+	margin: 0px 0px;
+	border-radius: 15px;
+	min-width: 30px;
+	color: #FFFFFF;
+	transition: all 0.3s ease-in-out;
+	background: rgba(0,0,0,0);
+}
+
+#workspaces button.active {
+	color: #FFFFFF;
+	border-radius: 15px;
+	min-width: 60px;
+	transition: all 0.3s ease-in-out;
+	background: rgba(0,0,0,0.75);
+}
+
+#workspaces button:hover {
+	color: #FFFFFF;
+	background: rgba(0,0,0,0.75);
+	border-radius: 15px;
+}
+
+#window {
+        color: #FFFFFF;
+        background-color: rgba(0,0,0,0.5);
+        border-radius: 15px;
+        padding: 2px 15px;
+        margin: 10px 15px;
+}
+
+#custom-spotify {
+        color: #FFFFFF;
+        background-color: rgba(0,0,0,0.5);
+        border-radius: 15px;
+        padding: 2px 15px;
+        margin: 10px 15px 10px 0px;
+	transition: all 0.3s ease-in-out;
+}
+
+#pulseaudio {
+        color: #FFFFFF;
+        background-color: rgba(0,0,0,0.5);
+	border-radius: 15px;
+	padding: 2px 15px;
+	margin: 10px 15px 10px 0px;
+}
+
+#network {
+        color: #FFFFFF;
+        background-color: rgba(0,0,0,0.5);
+	border-radius: 15px;
+	padding: 2px 15px;
+	margin: 10px 15px 10px 0px;
+}
+
+#clock {
+        color: #FFFFFF;
+        background-color: rgba(0,0,0,0.5);
+        border-radius: 15px;
+        padding: 2px 15px;
+        margin: 10px 15px 10px 0px;
+}
+
+#custom-pacman {
+        color: #FFFFFF;
+        background-color: rgba(0,0,0,0.5);
+        border-radius: 15px;
+        padding: 2px 15px;
+        margin: 10px 15px 10px 0px;
+}
+
+#tray { 
+        color: #FFFFFF;
+        background-color: rgba(0,0,0,0.5);
+        border-radius: 15px;
+        padding: 2px 15px;
+        margin: 10px 15px 10px 0px;
+}

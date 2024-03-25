@@ -1,0 +1,120 @@
+[
+{
+    "output": "DP-2",
+    "height": 50,
+    "spacing": 0,
+    "reload_style_on_change": true,
+    "modules-left": [
+        "hyprland/workspaces",
+	"hyprland/window"
+    ],
+    "modules-center": [
+    ],
+    "modules-right": [
+	"custom/spotify",
+	"pulseaudio",
+        "network",
+        "clock",
+	"custom/pacman",
+        "tray"
+    ],
+    "hyprland/workspaces": {
+	"format": "{icon} {windows}",
+	"on-click": "activate",
+	"active-only": "false",
+	"all-outputs": "false",
+	"format-icons": {
+	    "active": "",
+	    "default": "",
+	    "empty": ""
+	},
+	"window-rewrite-default": "",
+	"window-rewrite": {
+	    "class<>": "",
+	    "class<kitty>": " ",
+	    "class<chromium>": " ",
+	    "class<discord>": " ",
+	    "class<spotify>": " ",
+	},
+	"persistent-workspaces": {
+	    "DP-2": [2,7,8]
+        }
+    },
+    "custom/spotify": {
+        "exec": "/usr/bin/python3 /home/lilthrasher/.config/waybar/mediaplayer.py --player spotify",
+        "format": "{}  ",
+        "return-type": "json",
+        "on-click": "playerctl play-pause",
+        "on-scroll-up": "playerctl next",
+        "on-scroll-down": "playerctl previous"
+   },
+    "pulseaudio": {
+        "format": "{volume}%   {icon}",
+        "format-bluetooth": "{volume}%   {icon}",
+        "format-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", ""]
+        },
+        "scroll-step": 5,
+        "on-click": "pavucontrol",
+    },
+    "network": {
+	"format": "{ifname}",
+	"format-ethernet": "{ipaddr} / {cidr}   ",
+	"format-disconnected": "",
+    },
+    "clock": {
+	"timezone": "America/Indiana/Indianapolis",
+	"format": "   {:%A %b %e   |   %I:%M %p}   ",
+    },
+    "custom/pacman": {
+        "format": "{}  ",
+        "interval": 3600,                     // every hour
+        "exec": "checkupdates | wc -l",       // # of updates
+        "exec-if": "exit 0",                  // always run; consider advanced run conditions
+        "on-click": "kitty sudo pacman -Syu; pkill -SIGRTMIN+8 waybar", // update system
+        "signal": 8
+    },
+    "tray": {
+	"spacing": 15,
+    },
+},{
+    "output": ["DP-1","DP-3","HDMI-A-1"],
+    "height": 50,
+    "spacing": 0,
+    "reload_style_on_change": true,
+    "modules-left": [
+	"hyprland/workspaces"
+    ],
+    "hyprland/workspaces": {
+        "format": "{icon} {windows}",
+        "on-click": "activate",
+        "active-only": "false",
+        "all-outputs": "false",
+        "format-icons": {
+            "active": "",
+            "default": "",
+            "empty": ""
+        },
+        "window-rewrite-default": "",
+        "window-rewrite": {
+            "class<>": "",
+            "class<kitty>": " ",
+            "class<chromium>": " ",
+            "class<discord>": " ",
+            "class<spotify>": " ",
+        },
+        "persistent-workspaces": {
+            "DP-1": [1,5,6],
+	    "DP-3": [3,9,10],
+	    "HDMI-A-1": [4,11,12]
+        }
+    },
+}
+]
