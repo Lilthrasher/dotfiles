@@ -1,0 +1,112 @@
+[
+{
+    "output": "DP-2",
+    "height": 50,
+    "spacing": 0,
+    "reload_style_on_change": true,
+    "modules-left": [
+	"custom/spotify",
+	"hyprland/window"
+    ],
+    "modules-center": [
+	"hyprland/workspaces"
+    ],
+    "modules-right": [
+	"tray",
+	"custom/pacman",
+	"pulseaudio",
+        "network",
+        "clock",
+    ],
+    "hyprland/workspaces": {
+	"format": "{icon}",
+	"on-click": "activate",
+	"active-only": "false",
+	"all-outputs": "false",
+	"persistent-workspaces": {
+	    "DP-2": [3,7,8],
+	},
+	"format-icons": {
+	    "active": "",
+	    "default": "",
+	},
+    },
+    "custom/spotify": {
+        "exec": "/usr/bin/python3 /home/lilthrasher/.config/waybar/mediaplayer.py --player spotify",
+        "format": "  {}",
+        "return-type": "json",
+        "on-click": "playerctl play-pause",
+        "on-scroll-up": "playerctl next",
+        "on-scroll-down": "playerctl previous"
+    },
+    "hyprland/window": {
+	"separate-outputs": true,
+    },
+    "pulseaudio": {
+        "format": "{volume}%   {icon}",
+        "format-bluetooth": "{volume}%   {icon}",
+        "format-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "default": ["", ""]
+        },
+        "scroll-step": 5,
+        "on-click": "pavucontrol",
+    },
+    "network": {
+	"format": "{ifname}",
+	"format-ethernet": "{ipaddr} / {cidr}   ",
+	"format-disconnected": "",
+    },
+    "clock": {
+	"timezone": "America/Indiana/Indianapolis",
+	"format": "   {:%A %b %e   |   %I:%M %p}   ",
+    },
+    "custom/pacman": {
+        "format": "{}  ",
+        "interval": 3600,                     // every hour
+        "exec": "checkupdates | wc -l",       // # of updates
+        "exec-if": "exit 0",                  // always run; consider advanced run conditions
+        "on-click": "kitty sudo pacman -Syu; pkill -SIGRTMIN+8 waybar", // update system
+        "signal": 8
+    },
+    "tray": {
+	"spacing": 15,
+    },
+    "custom/power": {
+	"format": " ",
+    },
+},
+{
+    "output": ["DP-1","DP-3","HDMI-A-1"],
+    "height": 50,
+    "spacing": 0,
+    "reload_style_on_change": true,
+    "modules-left": [
+	"hyprland/window"
+    ],
+    "modules-center": [
+	"hyprland/workspaces"
+    ],
+    "modules-right": [
+    ],
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "on-click": "activate",
+        "active-only": "false",
+        "all-outputs": "false",
+	"persistent-workspaces": {
+	    "DP-1": [1,5,6],
+	    "DP-3": [4,9,10],
+	    "HDMI-A-1": [2,11,12],
+	},
+        "format-icons": {
+            "active": "",
+            "default": "",
+        },
+    },
+    "hyprland/window": {
+	"separate-outputs": true,
+    },
+}
+]
