@@ -1,5 +1,5 @@
 window#waybar {
-	background-color: rgba(0,0,0,0.25);
+	background-color: rgba(0,0,0,0);
 }
 
 /* Left Modules */
@@ -7,9 +7,13 @@ window#waybar {
 #custom-spotify, #window {
         color: #FFFFFF;
         padding: 2px 15px;
-        margin: 10px 0px 10px 15px;
+        margin: 15px 0px 0px 15px;
         border-radius: 15px;
         background: rgba(0,0,0,0.5);
+}
+
+#window {
+	margin-right: 15px;
 }
 
 window#waybar.empty #window {
@@ -20,7 +24,7 @@ window#waybar.empty #window {
 
 #workspaces {
         padding-right: 5px;
-        margin: 10px 0px;
+        margin: 15px 0px 0px 0px;
         border-radius: 15px;
         background: rgba(0,0,0,0.5);
 }
@@ -54,7 +58,7 @@ window#waybar.empty #window {
 #cpu, #memory, #pulseaudio, #network, #clock, #custom-pacman, #tray, #custom-power {
         color: #FFFFFF;
 	padding: 2px 15px;
-	margin: 10px 15px 10px 0px;
+	margin: 15px 15px 0px 0px;
 	border-radius: 15px;
         background-color: rgba(0,0,0,0.5);
 }

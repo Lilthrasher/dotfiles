@@ -1,7 +1,7 @@
 [
 {
     "output": "DP-2",
-    "height": 50,
+    "height": 45,
     "spacing": 0,
     "reload_style_on_change": true,
     "modules-left": [
@@ -83,7 +83,7 @@
 },
 {
     "output": ["DP-1","DP-3","HDMI-A-1"],
-    "height": 50,
+    "height": 45,
     "spacing": 0,
     "reload_style_on_change": true,
     "modules-left": [
