@@ -35,14 +35,15 @@
         "exec": "/usr/bin/python3 /home/lilthrasher/.config/waybar/mediaplayer.py --player spotify",
         "format": "  {}",
         "return-type": "json",
-        "on-click": "playerctl play-pause",
-        "on-scroll-up": "playerctl next",
-        "on-scroll-down": "playerctl previous"
+        "on-click": "playerctl --player=spotify play-pause",
+        "on-scroll-up": "playerctl --player=spotify next",
+        "on-scroll-down": "playerctl --player=spotify previous"
     },
     "hyprland/window": {
 	"separate-outputs": true,
     },
     "pulseaudio": {
+	"tooltip": false,
         "format": "{volume}%   {icon}",
         "format-bluetooth": "{volume}%   {icon}",
         "format-muted": "",
@@ -54,6 +55,7 @@
         "on-click": "pavucontrol",
     },
     "network": {
+	"tooltip": false,
 	"format": "{ifname}",
 	"format-ethernet": "{ipaddr} / {cidr}   ",
 	"format-disconnected": "",
@@ -63,6 +65,7 @@
 	"format": "   {:%A %b %e   |   %I:%M %p}   ",
     },
     "custom/pacman": {
+	"tooltip": false,
         "format": "{}  ",
         "interval": 3600,                     // every hour
         "exec": "checkupdates | wc -l",       // # of updates
@@ -71,6 +74,7 @@
         "signal": 8
     },
     "tray": {
+	"icon-size": 20,
 	"spacing": 15,
     },
     "custom/power": {

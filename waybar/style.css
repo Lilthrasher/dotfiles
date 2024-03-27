@@ -9,7 +9,7 @@ window#waybar {
         padding: 2px 15px;
         margin: 10px 0px 10px 15px;
         border-radius: 15px;
-        background-color: rgba(0,0,0,0.5);
+        background: rgba(0,0,0,0.5);
 }
 
 window#waybar.empty #window {

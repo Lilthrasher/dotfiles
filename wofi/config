@@ -1,0 +1,8 @@
+show=drun
+width=25%
+prompt=Search
+allow_images=true
+hide_scroll=true
+insensitive=true
+no_actions=true
+single_click=true
